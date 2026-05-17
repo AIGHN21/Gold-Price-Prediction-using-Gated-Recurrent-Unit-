@@ -6,15 +6,15 @@ This project implements a deep learning pipeline for financial time series forec
 
 Instead of directly predicting the next closing price, the model learns the **percentage change (return)** between consecutive days:
 
-[
+$$
 pct_t = \frac{Close_{t+1} - Close_t}{Close_t}
-]
+$$
 
 The predicted percentage is then transformed back into the predicted closing price:
 
-[
+$$
 PredictedClose = BaseClose \times (1 + PredictedPct)
-]
+$$
 
 This formulation stabilizes the learning process and allows the network to focus on market movement dynamics instead of absolute price scales.
 
