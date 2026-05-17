@@ -43,17 +43,20 @@ Additional engineered features include:
 
 ---
 
-# Feature Engineering
+# Feature Extraction
+
 
 ## Percentage Change Label
 
 The target variable is defined as:
 
-[
+$$
 y_t = \frac{Close_{t+1} - Close_t}{Close_t}
-]
+$$
 
 This transforms raw prices into stationary relative movements.
+
+
 
 ---
 
@@ -207,10 +210,8 @@ Potential future upgrades:
 
 * Multi-head attention
 * Transformer encoder blocks
-* Multi-horizon forecasting
-* Technical indicator embeddings
-* Cross-asset correlation learning
 * Probabilistic forecasting
+* Using Hidden Markov Model to define the hidden regime 
 
 ---
 
@@ -223,4 +224,3 @@ This project demonstrates a sequence forecasting approach for financial markets 
 * GRU recurrent modeling
 * Attention-based temporal weighting
 
-The architecture is lightweight, scalable, and suitable for experimentation on medium-scale GPU hardware such as Tesla T4 clusters.
